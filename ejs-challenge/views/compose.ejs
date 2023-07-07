@@ -1,0 +1,27 @@
+
+<% include ./partials/header.ejs %>
+<div class="maincreate">
+<h1 class="mb-4 newArticleHeading">New Article</h1>
+<form action="/compose" method="post" class="main_form">
+  <div >
+    <label class="createlamble">Title</label>
+  <input class="form-control" type="text" name="postTitle" required/>
+
+  <label  class="createlamble">Author</label>
+  <input class="form-control type=" text" name="postAuthor" required>
+
+  <label class="createlamble">Post</label>
+  <textarea
+    class="form-control"
+    name="postBody"
+    id=""
+    cols="30"
+    rows="10"
+    required
+  ></textarea>
+</div>
+<button class="btn btn-dark createbtn" > <a href="/">Cancle</a> </button>
+<button class="btn btn-primary createbtn" type="submit">Publish</button>
+</form>
+</div>
+<% include ./partials/footer.ejs %>

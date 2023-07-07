@@ -1,0 +1,18 @@
+<% include ./partials/header.ejs %>
+<div class="main_profile">
+<h1 class="greeting">Hello <%=user.name  %>✌</h1>
+<!-- <h1>Hello <%=user.email  %></h1>
+<h1>Hello <%=user.username  %></h1> -->
+
+
+<nav >
+    <ul class="li">
+    <li > <a class="ainli">Compose Post</a></li>
+    <li> <a class="ainli"href="/userposts/<%=user.name%>">See My Post</a></li>
+    
+    
+    <li  id="logout"><a class="ainli"href="/logout">LogOut </a></li>
+</ul>
+</nav>
+</div>
+<% include ./partials/footer.ejs %>

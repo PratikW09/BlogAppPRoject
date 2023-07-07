@@ -1,0 +1,29 @@
+
+<% include ./partials/header.ejs %>
+<div class="homecard">
+
+<!-- </div><% include ./partials/search.ejs %> -->
+<div class="homepage">
+<button class="compose_btn" ><a class="compselink" href="/compose"> Write Your First Post </a></button>
+<!-- <h1>Home Scrren content</h1> --></div>
+
+
+
+
+<!-- // getting first five post  -->
+
+<%posts.forEach(function(post){%>
+    <div class="homecardblog">
+    <a href="/post/<%= post._id %>">
+    <h1><%= post.title %></h1>  
+    </a>
+    <p><%= post.body.split(' ').slice(0, 10).join(' ') %></p>
+    <% if (post.body.split(' ').length > 10) { %>
+        ... <a href="/post/<%=post._id%>">Read More</a>
+      <% } %>    
+   <p><%= post.author %></p>  
+   <p><%= post.createdAt.toDateString() %></p> 
+</div> 
+<%}) %>
+</div>
+<% include ./partials/footer.ejs %>
